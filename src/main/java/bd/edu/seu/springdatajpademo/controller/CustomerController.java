@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -20,6 +21,9 @@ public class CustomerController {
     @GetMapping(value = "")
     String Home(Model model){
         model.addAttribute("helloMsg", "Hello World!");
+        List<Customer> customerList = new ArrayList<Customer>();
+        customerList.addAll(customerService.findAll());
+        model.addAttribute("customerList", customerList);
         return "index";
     }
 

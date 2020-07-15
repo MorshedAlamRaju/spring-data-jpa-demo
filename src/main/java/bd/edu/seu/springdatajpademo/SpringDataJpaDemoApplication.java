@@ -24,7 +24,7 @@ public class SpringDataJpaDemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringDataJpaDemoApplication.class, args);
     }
-
+/*
     @Bean
     public CommandLineRunner demo(CustomerController customerController){
         return (args) -> {
@@ -59,5 +59,5 @@ public class SpringDataJpaDemoApplication {
             });
             log.info("");
         };
-    }
+    }*/
 }
