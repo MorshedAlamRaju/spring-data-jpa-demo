@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Data JPA and Thymeleaf Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="/css/styles.css" th:href="@{/css/styles.css}" />
+</head>
+
+<body>
+    <p>Add Customer to Table</p>
+
+    <form action="#" th:action="@{/addCustomer}" method="post">
+        <p>Id: <input type="text"   th:name="id" /></p>
+        <p>First Name: <input type="text" th:name="firstName" /></p>
+        <p>Last Name: <input type="text" th:name="lastName"/></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+
+    <p th:text="${status}">Query Status</p>
+
+<!--    <form action="#" th:action="@{/addCumtomer}" th:object="${Customer}" method="post">-->
+<!--        <label for="id"> ID: </label>-->
+<!--        <input type="number" th:field="*{id}" id="id" placeholder="Customer ID">-->
+<!--        <label for="firstName">First Name: </label>-->
+<!--        <input type="text" th:field="*{firstName}" id="firstName" placeholder="First Name">-->
+<!--        <label for="lastName">Last Name: </label>-->
+<!--        <input type="text" th:field="*{lastName}" id="lastName" placeholder="lastName">-->
+<!--        <input type="submit" value="Add Customer">-->
+<!--    </form>-->
+
+<!--    <form action="#" th:action="@{/addCustomer}" method="post" th:method="post">-->
+<!--        <fieldset>-->
+<!--            <legend>Customer Info</legend>-->
+<!--            <label for="id">ID: </label>-->
+<!--            <input type="number" name="id" id="id"/>-->
+<!--            <label for="firstName">First Name: </label>-->
+<!--            <input type="text" name="firstName" id="firstName">-->
+<!--            <label for="lastName">Last Name: </label>-->
+<!--            <input type="text" name="lastName" id="lastName">-->
+<!--            <input type="submit" value="Add"/>-->
+<!--        </fieldset>-->
+<!--    </form>-->
+
+    <p>
+        <a href="home.html" th:href="@{/}">Return to home</a>
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Data JPA and Thymeleaf Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="/css/styles.css" th:href="@{/css/styles.css}" />
+</head>
+
+    <body>
+        <p>Please select an option</p>
+        <ol>
+            <li><a href="list.html" th:href="@{/addCustomer}">Add or Update Customer</a></li>
+            <li><a href="delete.html" th:href="@{/deleteCustomer}">Delete Customer</a></li>
+            <li><a href="find.html" th:href="@{/findCustomer}">Search Customer</a></li>
+        </ol>
+
+        <div class="container">
+            <h2 style="text-align: center">Customer Table</h2>
+            <table class="table table-dark">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="customer : ${customerList}">
+                    <td th:text="${customer.id}">#</td>
+                    <td th:text="${customer.firstName}">Chandler</td>
+                    <td th:text="${customer.lastName}">Bing</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

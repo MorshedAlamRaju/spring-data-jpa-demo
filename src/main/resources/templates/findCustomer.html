@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Data JPA and Thymeleaf Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="/css/styles.css" th:href="@{/css/styles.css}" />
+</head>
+
+<body>
+<p>Find Customer</p>
+
+<form action="#" th:action="@{/findCustomer}" method="post">
+    <p>Id: <input type="text" th:name="id" /></p>
+    <p><input type="submit" value="Find" /></p>
+</form>
+
+    <div th:if="${customer}">
+        <h2 style="font-weight: 500">Customer Info</h2>
+        <p>Customer ID: <i th:text="${customer.getId()}">#</i></p>
+        <p>First Name: <i th:text="${customer.getFirstName()}">Dummy Name</i> </p>
+        <p>Last Name: <i th:text="${customer.getLastName()}">Dummy Name</i></p>
+    </div>
+    <div th:unless="${customer}">
+        <p th:text="${status}"></p>
+    </div>
+<p>
+    <a href="home.html" th:href="@{/}">Return to home</a>
+</p>
+
+</body>
+</html>
