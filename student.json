@@ -1,1 +1,21 @@
-{"id":"21","name":"chandler","gender":"male"}
+
+{
+"parsed": [
+        {
+            "food": {
+                "foodId": "<FoodID>",
+                "label": "apple",
+                "nutrients": {
+                    "ENERC_KCAL": 52,
+                    "PROCNT": 0.26,
+                    "FAT": 0.17,
+                    "CHOCDF": 13.81,
+                    "FIBTG": 2.4
+                },
+                "category": "Generic foods",
+                "categoryLabel": "food",
+                "image": "<Image URL>"
+            }
+        }
+    ]
+}
